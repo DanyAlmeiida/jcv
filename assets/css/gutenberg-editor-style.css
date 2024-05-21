@@ -1,0 +1,19 @@
+.wp-block-quote {
+	border: none!important;
+}
+
+.wp-block-quote p {
+	position: relative;
+}
+
+.wp-block-quote p:before {
+	content: "\201C";
+	font-size: 8em;
+	font-family: Georgia;
+	position: absolute;
+	top: -20px;
+	left: 0;
+	line-height: 1em;
+	color: rgb(170, 170, 170);
+	z-index: -1;
+}

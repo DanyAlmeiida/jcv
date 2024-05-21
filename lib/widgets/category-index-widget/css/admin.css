@@ -1,0 +1,28 @@
+.category-selection {
+	margin-top: 0;
+	margin-bottom: 1.5em;
+	display: block;
+}
+
+.category-selection li {
+	display: inline-block;
+	cursor: move;
+	margin-top: 1.5em;
+}
+
+.category-selection .selected-cat {
+	border: 1px dashed #444444;
+	padding: 0.5em 1em;
+	border-radius: 30px;
+	background-color: white;
+	margin: 0.5em;
+}
+.category-selection .selected-cat.highlighted {
+	background-color: #e4e4e4;
+}
+
+.category-selection .remove {
+	margin-left: 0.15em;
+	cursor: pointer;
+	vertical-align: middle;
+}

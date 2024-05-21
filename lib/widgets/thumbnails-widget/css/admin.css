@@ -1,0 +1,38 @@
+label {
+	width: 100%;
+	display: block;
+}
+
+input[type="checkbox"] + label{
+	display: inline-block;
+	width: auto;
+}
+
+.preview {
+	display: block;
+	width: 100%;
+	margin-bottom:15px;
+}
+
+input.selection {
+	display: none;
+}
+
+.toggle-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	cursor: pointer;
+}
+
+.toggle-content h3 {
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	width: auto;
+	font-weight: 400;
+}
+
+.toggle {
+	display: none;
+}

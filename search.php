@@ -1,0 +1,61 @@
+<?php
+/**
+ * The template for displaying search results pages
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+ *
+ * @package My_Boutique_Theme
+ */
+
+get_header(); ?>
+
+	<section id="primary" class="content-area">
+		
+		<header class="page-header">
+			<h1 class="page-title"><?php
+				/* translators: %s: search query. */
+				printf( esc_html__( 'Search Results for: %s', 'rachel' ), '<span>' . get_search_query() . '</span>' );
+			?></h1>
+		</header><!-- .page-header -->
+
+		<main id="main" class="site-main">
+
+		<?php
+		if ( have_posts() ) : ?>
+
+
+			<?php
+			/* Start the Loop */
+			while ( have_posts() ) : the_post();
+
+				/**
+				 * Run the loop for the search to output the results.
+				 * If you want to overload this in a child theme then include a file
+				 * called content-search.php and that will be used instead.
+				 */
+				get_template_part( 'template-parts/content/content', 'home-small' );
+
+			endwhile;
+
+			the_posts_navigation();
+
+		else :
+
+			get_template_part( 'template-parts/content/content', 'none' );
+
+			?>
+
+			<h3><?php _e('Or have a look at the latest Posts: ', 'rachel') ?></h3>
+			<?php rachel_featured_row('featured-small', 3, 0, 3, false); ?>
+
+			<?php
+
+		endif; ?>
+
+		</main><!-- #main -->
+	</section><!-- #primary -->
+
+</div>
+
+<?php
+get_footer();
